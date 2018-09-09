@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script>
+	$(document).ready(function(){
+    $('.sidenav ul li').click(function() {
+        $(this).siblings('li').removeClass('active');
+        $(this).addClass('active');
+		});
+	});
+ 
+ </script>
+
   <style>
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
     .row.content {height: 1500px}
@@ -47,6 +58,7 @@
 	  margin-left: auto;
 	  margin-right: auto;
 	  margin-bottom: 30px;
+	  width:150px
 	}
 		
 	h1, h2, h3, h4, h5, h6 {
@@ -123,6 +135,15 @@
 		-o-transition: 0.3s;
 		transition: 0.3s;
 	}
+	
+	.sidenav ul li.active a {
+		color: #2c98f0;
+		text-decoration: underline;
+		-webkit-transition: 0.3s;
+		-o-transition: 0.3s;
+		transition: 0.3s;
+	}
+
 
 	
 
@@ -139,7 +160,7 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav">
-	  <img class="profileimg"src="public/images/img_avatar.png" alt="Avatar" style="width:175px">
+	  <img class="profileimg"src="public/images/img_avatar.png" alt="Avatar">
 	  <h3>Chen Lu</h3>
 	  <h5>Graduate Developer</h5>
 
