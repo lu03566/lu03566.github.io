@@ -33,18 +33,25 @@
 
 	
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
+    .row.content {
+		    height: 100%;
+	}
     
     /* Set gray background color and 100% height */
     .sidenav {
       background-color: #f2f3f7;
       height: 100%;
 	  padding-top: 3em;
-    }
+	  height: 1022px;
+	  position:fixed;
+	  max-width:25%;
+  }
 	
 	.container-fluid {
 	  max-width: 1170px;
-	  margin: 0 auto;
+	}
+	
+	.container-fluid after{
 	}
     
     /* Set black background color, white text and some padding */
@@ -59,6 +66,8 @@
       .sidenav {
         height: auto;
         padding: 15px;
+		
+
       }
       .row.content {height: auto;} 
     }
@@ -110,7 +119,7 @@
 	.sidenav ul {
       text-align: center;
       margin: 0;
-      padding: 0; 
+      padding: 0;
 	}
 	  
     @media screen and (max-width: 768px) {
@@ -129,7 +138,8 @@
 	
 		
 	.sidenav ul li a{
-	  font-weight: 600;
+	  font-weight: 400;
+	  font-size: 14px;
 	  color: rgba(0, 0, 0, 0.7);
 	  text-decoration: none;
 	  position: relative;
@@ -157,13 +167,13 @@
 		transition: 0.3s;
 	}
 
-	.section-home {
+	.section-home, .section-education {
 		padding-top: 9em;
-		padding-bottom: 9em;
 		clear: both;
 		width: 100%;
 		display: block; 
-	}
+		height:100vh;
+		}
 	
 	.heading-meta {
 		margin-bottom: 4em;
@@ -194,8 +204,31 @@
 	  letter-spacing: 5px;
 	  font-weight: 500;
 	 }
+	
 
+	.panel-heading {
+		padding : 0;
+	}
 
+	.panel-heading a {
+		padding: 20px 25px;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		font-weight: 500;
+		font-size: 14px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-family: "Quicksand",Arial,sans-serif;
+		background-color: #2c98f0;
+		color: #fff;
+		position: relative;
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		-ms-box-shadow: none !important;
+		-o-box-shadow: none !important;
+		box-shadow: none !important;
+	}
 
 
 
@@ -206,22 +239,23 @@
 
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-3 sidenav">
+
+    <div class="col-sm-2 sidenav">
 	  <img class="profileimg"src="public/images/img_avatar.png" alt="Avatar">
 	  <h3>Chen Lu</h3>
 	  <h5>Graduate Developer</h5>
 
       <ul class="nav nav-stacked">
         <li class="active"><a href="#section-home">Home</a></li>
-        <li><a href="#section2">Friends</a></li>
+        <li><a href="#section-education">Education</a></li>
         <li><a href="#section3">Family</a></li>
         <li><a href="#section3">Photos</a></li>
       </ul><br>
     </div>
 
-    <div class="col-sm-9">
+    <div class="col-sm-10 col-sm-offset-3">
 	
-		<section class="section-home">
+		<section class="section-home" id="section-home">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-12">
@@ -244,18 +278,112 @@
 					</div>
 				</div>
 			</section>
+			
+			<section class="section-education" id="section-education">
+				<div class="colorlib-narrow-content">
+					<div class="about-desc">
+
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box">
+
+							<h2 class="colorlib-heading animate-box">Education</h2>
+							<span class="heading-meta">Education</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" >
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Master Degree Graphic Design
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div class="panel-body">
+									            <div class="row">
+										      		<div class="col-md-6">
+										      			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+										      		</div>
+										      		<div class="col-md-6">
+										      			<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+										      		</div>
+										      	</div>
+									         </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor Degree of Computer Science
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+													<ul>
+														<li>Separated they live in Bookmarksgrove right</li>
+														<li>Separated they live in Bookmarksgrove right</li>
+													</ul>
+									        </div>
+									    </div>
+									</div>
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingThree">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Diploma in Information Technology
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>	
+									        </div>
+									    </div>
+									</div>
+
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFour">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Diploma in Information Technology
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>	
+									        </div>
+									    </div>
+									</div>
+
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingFive">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">High School Secondary Education
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>	
+									        </div>
+									    </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</section>
 
     </div>
 	
-	
   </div>
 </div>
-
-<section id="section2">
-<footer class="container-fluid">
-  <p>Footer Text</p>
-</footer>
-</section>
 
 </body>
 </html>
